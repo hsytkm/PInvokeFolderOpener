@@ -1,0 +1,38 @@
+﻿<UserControl
+    x:Class="PInvokeFolderOpener.App.SelectFolder"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+    xmlns:local="clr-namespace:PInvokeFolderOpener.App"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d">
+
+    <StackPanel Margin="5">
+        <TextBlock
+            FontSize="14"
+            FontWeight="Bold"
+            Text="{Binding Title, Mode=OneTime, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}" />
+
+        <Button
+            Margin="5"
+            Padding="0,5"
+            Content="{Binding Title, Mode=OneTime, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}, StringFormat='Open Folder {0}'}">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="Click">
+                    <local:OpenFolderDialogAction
+                        Title="{Binding Title, Mode=OneTime, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}"
+                        SelectedFolderPath="{Binding SelectedFolderPath, Mode=TwoWay, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Button>
+
+        <TextBlock
+            Margin="10"
+            Text="{Binding SelectedFolderPath, Mode=OneWay, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}"
+            TextWrapping="Wrap" />
+
+    </StackPanel>
+</UserControl>

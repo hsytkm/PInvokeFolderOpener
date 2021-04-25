@@ -1,0 +1,7 @@
+﻿IFileOpenDialog
+IShellItem
+SHILCreateFromPath
+SHCreateShellItem
+SIGDN
+_FILEOPENDIALOGOPTIONS
+ERROR_CANCELLED

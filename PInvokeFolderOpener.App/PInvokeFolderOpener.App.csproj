@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.31" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PInvokeFolderOpener.CsWin32\PInvokeFolderOpener.CsWin32.csproj" />
+    <ProjectReference Include="..\PInvokeFolderOpener.RawPInvoke\PInvokeFolderOpener.RawPInvoke.csproj" />
+  </ItemGroup>
+
+</Project>
