@@ -24,7 +24,8 @@
                 <i:EventTrigger EventName="Click">
                     <local:OpenFolderDialogAction
                         Title="{Binding Title, Mode=OneTime, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}"
-                        SelectedFolderPath="{Binding SelectedFolderPath, Mode=TwoWay, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}" />
+                        SelectedFolderPath="{Binding SelectedFolderPath, Mode=TwoWay, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}"
+                        UseCsWin32="{Binding UseCsWin32, Mode=OneTime, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}" />
                 </i:EventTrigger>
             </i:Interaction.Triggers>
         </Button>
